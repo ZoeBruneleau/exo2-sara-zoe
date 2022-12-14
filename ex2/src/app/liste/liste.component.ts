@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-liste',
@@ -14,7 +14,10 @@ export class ListeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public title:string =""
 
-
+  public showFilm(film:string){
+    return this.title=film;
+  }
 
 }

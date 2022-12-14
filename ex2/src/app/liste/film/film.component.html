@@ -1,8 +1,8 @@
-<div class="card-deck w-25 mx-auto m-5">
+<div class="card-deck w-25 mx-auto m-5" *ngIf="film != '' ">
   <div class="card">
-    <img class="card-img-top rounded" id='img' src="../assets/images/fastandfurious.jpg" alt="Card image cap">
+    <img class="card-img-top rounded" id='img' src="../assets/images/{{film | lowercase | noBlanks}}.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Title</h5>
+      <h5 class="card-title">{{film}}</h5>
     </div>
 
   </div>

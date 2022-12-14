@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListeComponent } from './liste/liste.component';
 import { FilmComponent } from './liste/film/film.component';
+import { NoBlanksPipe } from './no-blanks.pipe';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FilmComponent } from './liste/film/film.component';
     AppComponent,
     FooterComponent,
     ListeComponent,
-    FilmComponent
+    FilmComponent,
+    NoBlanksPipe
   ],
   imports: [
     BrowserModule,
