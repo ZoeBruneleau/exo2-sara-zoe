@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeComponent implements OnInit {
 
- listFilm: string[] =["Avatar", "Baby-sitting","Mascarade","Interstellar","Fast and Furious"];
+ listFilm: string[] =["Avatar", "Baby driver","Mascarade","Interstellar","Fast and Furious"];
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 
 }
