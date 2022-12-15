@@ -4,10 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
+
 import { GifComponent } from './gif/gif.component';
 import {NavbarComponent} from "./navbar/navbar.component";
 import { ContactComponent } from './contact/contact.component';
 import {ReactiveFormsModule} from "@angular/forms";
+
+import { ListeComponent } from './liste/liste.component';
+import { FilmComponent } from './liste/film/film.component';
+import { NoBlanksPipe } from './no-blanks.pipe';
+
 
 
 @NgModule({
@@ -17,6 +23,10 @@ import {ReactiveFormsModule} from "@angular/forms";
     GifComponent,
     NavbarComponent,
     ContactComponent,
+    ListeComponent,
+    FilmComponent,
+    NoBlanksPipe
+
   ],
   imports: [
     BrowserModule,
