@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { GifComponent } from './gif/gif.component';
 import {NavbarComponent} from "./navbar/navbar.component";
 import { ContactComponent } from './contact/contact.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
