@@ -7,7 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { GifComponent } from './gif/gif.component';
 import {NavbarComponent} from "./navbar/navbar.component";
 import { ContactComponent } from './contact/contact.component';
-import {Routes} from "@angular/router";
+
 
 @NgModule({
   declarations: [
@@ -26,9 +26,4 @@ import {Routes} from "@angular/router";
 })
 export class AppModule { }
 
-const routes: Routes = [
-  { path: '/contact', component: ContactComponent },
-  { path: '/home', component: GifComponent },
-  { path: '**', component:GifComponent}
 
-];
