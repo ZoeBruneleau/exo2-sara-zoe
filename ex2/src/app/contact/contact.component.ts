@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl, FormControlName, FormGroup, Validator, Validators} from "@angular/forms";
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {
+  FormControl,
+  FormGroup,
+  Validators
+} from "@angular/forms";
 
 @Component({
   selector: 'app-contact',
@@ -28,22 +32,25 @@ export class ContactComponent implements OnInit {
 
   })
 
-  get nom() { return this.contactForm.get('nom'); }
-
-
   //cache l input email quand la checkbox is checked
   //retire le validators required quand le champs mail est caché
-  // et inversement
   //Validators à tester !!!
+ mail: string = ""
+
   hide() {
     if (this.ishide){
+      this.mail ="";
+
       this.ishide=false;
-      this.isrequired=true;
+      this.isrequired=false;
+      this.contactForm.controls['email'].setErrors({'incorrect': true});
 
     }
     else{
       this.ishide=true;
-      this.isrequired=false;
+      this.contactForm.controls['email'].setErrors(null);
+
+
     }
   }
 
