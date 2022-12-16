@@ -12,7 +12,8 @@ export class ContactComponent implements OnInit {
 
   ishide:boolean = false ;
   isrequired:boolean = true ;
-  isdisabled :boolean = true;
+  isdisabled :boolean = false;
+
 
   ngOnInit(): void {
   }
@@ -26,6 +27,8 @@ export class ContactComponent implements OnInit {
     hide : new FormControl(''),
 
   })
+
+  get nom() { return this.contactForm.get('nom'); }
 
 
   //cache l input email quand la checkbox is checked

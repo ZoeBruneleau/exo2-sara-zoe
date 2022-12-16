@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-5 mb-3">
         <label for="prenom" class="form-label">Prénom</label>
-        <input type="email" formControlName="prenom" class="input-text" id="prenom" placeholder="prénom">
+        <input type="email" formControlName="prenom" class="input-text" id="prenom" placeholder="prénom" required>
       </div>
       <div class="col-md-5 mb-3">
         <label for="nom" class="form-label">Nom</label>
@@ -19,7 +19,7 @@
       <div class="col-md-5 mb-3 form-check">
           <input class="form-check-input" (change)="hide()"  formControlName="hide"  type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-            check me for Hide email
+            Hide email
           </label>
       </div>
         <div class="col-md-5 mb-3" [hidden]="ishide">
@@ -31,8 +31,10 @@
     <label for="exampleFormControlTextarea1" class="form-label">Commentaires</label>
     <textarea class="form-control" formControlName="commentaire"  id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-    <input type="submit" class="submit-btn" value="Envoyer" [disabled]="isdisabled" >
+    <input type="submit" class="btn" [disabled]="!contactForm.valid" value="Envoyer"  >
 </div>
+
+  <p>{{contactForm.status}}</p>
 
 
 </form>
