@@ -10,6 +10,10 @@ export class ContactComponent implements OnInit {
 
   constructor() { }
 
+  ishide:boolean = false ;
+  isrequired:boolean = true ;
+  isdisabled :boolean = true;
+
   ngOnInit(): void {
   }
 
@@ -22,6 +26,23 @@ export class ContactComponent implements OnInit {
     hide : new FormControl(''),
 
   })
+
+
+  //cache l input email quand la checkbox is checked
+  //retire le validators required quand le champs mail est caché
+  // et inversement
+  //Validators à tester !!!
+  hide() {
+    if (this.ishide){
+      this.ishide=false;
+      this.isrequired=true;
+
+    }
+    else{
+      this.ishide=true;
+      this.isrequired=false;
+    }
+  }
 
 
 }

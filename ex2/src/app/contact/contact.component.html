@@ -17,21 +17,21 @@
     </div>
 
       <div class="col-md-5 mb-3 form-check">
-          <input class="form-check-input" formControlName="hide"  type="checkbox" value="" id="flexCheckDefault">
+          <input class="form-check-input" (change)="hide()"  formControlName="hide"  type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
             check me for Hide email
           </label>
       </div>
-        <div class="col-md-5 mb-3">
+        <div class="col-md-5 mb-3" [hidden]="ishide">
           <label for="age" class="form-label">Email</label>
-          <input type="email" formControlName="email"  class="input-text" id="email" placeholder="name@gmail.com">
+          <input type="email" [required]="isrequired" formControlName="email"   class="input-text" id="email" placeholder="name@gmail.com">
         </div>
 
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Commentaires</label>
     <textarea class="form-control" formControlName="commentaire"  id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-    <button type="button" class="submit-btn " disabled>Envoyer</button>
+    <input type="submit" class="submit-btn" value="Envoyer" [disabled]="isdisabled" >
 </div>
 
 
