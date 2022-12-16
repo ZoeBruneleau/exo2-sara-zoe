@@ -1,7 +1,7 @@
 <div class="m-5" >
-<div class="w-25 list-group " *ngFor="let film of listFilm" >
-  <a (click)="showFilm(film)" class="color list-group-item list-group-item-action ">
-  {{film}}</a>
+<div class="w-25 list-group w-50 mx-auto" *ngFor="let film of listFilm" >
+  <a (click)="showFilm(film)" class="  list-group-item list-group-item-action ">
+ {{film}} </a>
 </div>
 </div>
 <app-film [film]='title' >
