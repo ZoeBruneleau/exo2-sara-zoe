@@ -1,15 +1,18 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, NgModule, OnInit, ViewChild} from '@angular/core';
 import {
   FormControl,
   FormGroup,
   Validators
 } from "@angular/forms";
+import {RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
+
+
 export class ContactComponent implements OnInit {
 
   constructor() { }
@@ -34,7 +37,6 @@ export class ContactComponent implements OnInit {
 
   //cache l input email quand la checkbox is checked
   //retire le validators required quand le champs mail est caché
-  //Validators à tester !!!
  mail: string = ""
 
   hide() {
@@ -53,6 +55,8 @@ export class ContactComponent implements OnInit {
 
     }
   }
+
+
 
 
 }
