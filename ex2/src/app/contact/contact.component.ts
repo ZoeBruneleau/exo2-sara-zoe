@@ -2,9 +2,9 @@ import {Component, Input, NgModule, OnInit, ViewChild} from '@angular/core';
 import {
   FormControl,
   FormGroup,
-  Validators
+  Validators,
 } from "@angular/forms";
-import {RouterModule} from "@angular/router";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-contact',
@@ -15,11 +15,12 @@ import {RouterModule} from "@angular/router";
 
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ishide:boolean = false ;
   isrequired:boolean = true ;
   isdisabled :boolean = false;
+
 
 
   ngOnInit(): void {
@@ -34,6 +35,9 @@ export class ContactComponent implements OnInit {
     hide : new FormControl(''),
 
   })
+
+
+
 
   //cache l input email quand la checkbox is checked
   //retire le validators required quand le champs mail est caché
@@ -54,6 +58,13 @@ export class ContactComponent implements OnInit {
 
 
     }
+  }
+
+  save(){
+    alert(this.contactForm.value);
+    console.log(this.contactForm.value);
+    this.router.navigate(['/gestion']);
+
   }
 
 

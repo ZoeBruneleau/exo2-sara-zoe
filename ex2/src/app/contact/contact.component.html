@@ -1,4 +1,4 @@
-<form [formGroup]="contactForm" class="form-goup contact-form ">
+<form [formGroup]="contactForm" (ngSubmit)="save()" class="form-goup contact-form ">
   <h1 class="title">Contact</h1>
   <div class="container w-50  justify-content-center mt-5 mb-5 ">
     <div class="row">

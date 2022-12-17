@@ -13,6 +13,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { ListeComponent } from './liste/liste.component';
 import { FilmComponent } from './liste/film/film.component';
 import { NoBlanksPipe } from './no-blanks.pipe';
+import { GestionComponent } from './gestion/gestion.component';
 
 
 
@@ -25,7 +26,8 @@ import { NoBlanksPipe } from './no-blanks.pipe';
     ContactComponent,
     ListeComponent,
     FilmComponent,
-    NoBlanksPipe
+    NoBlanksPipe,
+    GestionComponent
 
   ],
   imports: [
