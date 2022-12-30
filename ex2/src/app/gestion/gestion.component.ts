@@ -24,7 +24,8 @@ export class GestionComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.form.value);
-    this.form = this.service.getLastForm()
+    if (this.service.getLastForm() != undefined)
+      this.form = this.service.getLastForm()
 
   }
 

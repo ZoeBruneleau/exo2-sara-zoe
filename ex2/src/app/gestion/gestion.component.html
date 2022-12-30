@@ -1,4 +1,4 @@
-  <form [formGroup]="form"  class="form-goup contact-form ">
+<div *ngIf="form.status =='VALID'; else elseBlock"><form [formGroup]="form"  class="form-goup contact-form ">
     <h1 class="title">GESTION</h1>
     <div class="container w-50  justify-content-center mt-5 mb-5 ">
       <div class="row">
@@ -27,3 +27,19 @@
     </div>
 
   </form>
+</div>
+<ng-template #elseBlock>
+  <body>
+  <div class="d-flex align-items-center justify-content-center mt-5">
+    <div class="text-center mt-5">
+      <h1 class="display-1 fw-bold">404</h1>
+      <p class="fs-3"> <span class="text-danger">Opps!</span> Page pas trouvée.</p>
+      <p class="lead">
+        Aucun formulaire n’a été envoyé.
+      </p>
+      <a href="/" class="btn btn-primary">Go Home</a>
+    </div>
+  </div>
+  </body>
+
+</ng-template>
