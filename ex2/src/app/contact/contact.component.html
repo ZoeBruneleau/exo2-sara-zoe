@@ -3,11 +3,11 @@
   <div class="container w-50  justify-content-center mt-5 mb-5 ">
     <div class="row">
       <div class="col-md-5 mb-3">
-        <label for="prenom" class="form-label">Prénom</label>
+        <label for="prenom" class="form-label">*Prénom</label>
         <input type="email" formControlName="prenom" class="input-text" id="prenom" placeholder="prénom" required>
       </div>
       <div class="col-md-5 mb-3">
-        <label for="nom" class="form-label">Nom</label>
+        <label for="nom" class="form-label">*Nom</label>
         <input type="text" formControlName="nom" class="input-text" id="nom" placeholder="nom">
       </div>
       <div class="col-md-2 mb-3">
@@ -23,20 +23,16 @@
           </label>
       </div>
         <div class="col-md-5 mb-3" [hidden]="ishide">
-          <label for="age" class="form-label">Email</label>
+          <label for="age" class="form-label">*Email</label>
           <input  [required]="isrequired" formControlName="email" [(ngModel)]="mail" class="input-text" id="email" placeholder="name@gmail.com" [email]=false>
         </div>
 
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Commentaires</label>
+    <label for="exampleFormControlTextarea1" class="form-label">*Commentaires</label>
     <textarea class="form-control" formControlName="commentaire"  id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
     <input type="submit" class="btn" [disabled]="!contactForm.valid" value="Envoyer"  >
 </div>
-
-
-  <p>{{contactForm.status}}</p>
-
 
 </form>
 

@@ -5,6 +5,8 @@ import {
   Validators,
 } from "@angular/forms";
 import {Router} from "@angular/router";
+import {ServiceService} from "../gestion/service/service.service";
+import {LastForm} from "../LastForm";
 
 @Component({
   selector: 'app-contact',
@@ -15,34 +17,29 @@ import {Router} from "@angular/router";
 
 export class ContactComponent implements OnInit {
 
-  constructor(private router: Router) { }
-
-  ishide:boolean = false ;
-  isrequired:boolean = true ;
-  isdisabled :boolean = false;
-
-
-
-  ngOnInit(): void {
-  }
-
   contactForm = new FormGroup({
     prenom : new FormControl('',Validators.required),
     nom : new FormControl('', Validators.required),
-    age: new FormControl('',Validators.required),
-    email : new FormControl('',Validators.required),
+    age: new FormControl(''),
+    email : new FormControl('',[Validators.required, Validators.email]),
     commentaire: new FormControl('',Validators.required),
     hide : new FormControl(''),
-
   })
+  ishide:boolean = false ;
+  isrequired:boolean = true ;
+  isdisabled :boolean = false;
+  mail: string = ""
 
+  constructor(private router: Router, private service:ServiceService) {
 
+  }
 
+  ngOnInit(): void {
+    this.service.setLastForm((this.contactForm))
+  }
 
   //cache l input email quand la checkbox is checked
   //retire le validators required quand le champs mail est caché
- mail: string = ""
-
   hide() {
     if (this.ishide){
       this.mail ="";
