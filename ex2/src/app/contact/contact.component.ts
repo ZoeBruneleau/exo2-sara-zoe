@@ -6,7 +6,6 @@ import {
 } from "@angular/forms";
 import {Router} from "@angular/router";
 import {ServiceService} from "../gestion/service/service.service";
-import {LastForm} from "../LastForm";
 
 @Component({
   selector: 'app-contact',
